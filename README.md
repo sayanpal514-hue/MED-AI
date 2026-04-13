@@ -42,11 +42,3 @@ medical_ai_node/
    ```
 4. **Test it!** Open `http://localhost:3000` in your web browser.
 
-## ☁️ Deployment to Vercel
-
-This project is pre-configured with a `vercel.json` file, so Vercel natively understands that the `public/` folder is your static frontend and `server.js` functions as a Vercel Serverless API.
-
-### Easy Deploy via Vercel CLI
-1. Install the Vercel CLI: `npm i -g vercel`
-2. Run `vercel` inside the repository directory.
-3. Don't forget to push your `GEMINI_API_KEY` into the Vercel Dashboard -> Settings -> Environment Variables. Your app will automatically go live securely!
