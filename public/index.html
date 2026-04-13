@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medical AI Assistant</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- Header -->
+    <div class="header">
+      <div class="header-icon">🏥</div>
+      <h1>Medical AI Assistant</h1>
+      <p>Describe your symptoms to get possible conditions, treatments &amp; advice</p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab active" onclick="setTab('symptoms')">Symptom Checker</button>
+      <button class="tab" onclick="setTab('ask')">Ask a Question</button>
+    </div>
+
+    <!-- Symptom Checker Tab -->
+    <div id="tab-symptoms">
+      <div class="section-title">Common symptoms — tap to select</div>
+      <div class="symptom-grid" id="symptomGrid"></div>
+      <div class="selected-tags" id="selectedTags"></div>
+      <div class="input-row">
+        <input id="customSymptom" type="text" placeholder="Add more details or type a custom symptom..." />
+        <button class="analyze-btn" id="analyzeBtn" onclick="analyze()">Analyze</button>
+      </div>
+    </div>
+
+    <!-- Ask a Question Tab -->
+    <div id="tab-ask" style="display:none;">
+      <div class="input-row">
+        <input
+          id="questionInput"
+          type="text"
+          placeholder="e.g. What is diabetes? How to treat high BP?"
+          onkeydown="if(event.key==='Enter') askQuestion()"
+        />
+        <button class="analyze-btn" id="askBtn" onclick="askQuestion()">Ask</button>
+      </div>
+    </div>
+
+    <!-- Result Area -->
+    <div id="resultArea"></div>
+
+    <!-- Disclaimer -->
+    <div class="disclaimer">
+      ⚠️ This AI is for <strong>informational purposes only</strong>.
+      It does not replace a qualified doctor. Always consult a licensed medical professional for diagnosis and treatment.
+    </div>
+
+  </div>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>

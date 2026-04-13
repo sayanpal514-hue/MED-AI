@@ -1,0 +1,251 @@
+/* ===========================
+   Medical AI Assistant - CSS
+   =========================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background: #f4f6fb;
+  color: #1a1a1a;
+  min-height: 100vh;
+}
+
+/* ---- App Container ---- */
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* ---- Header ---- */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header-icon {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.header h1 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.header p {
+  font-size: 14px;
+  color: #666;
+  margin-top: 6px;
+}
+
+/* ---- Tabs ---- */
+.tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.tab {
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: transparent;
+  color: #666;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.tab:hover {
+  border-color: #378ADD;
+  color: #378ADD;
+}
+
+.tab.active {
+  background: #378ADD;
+  color: white;
+  border-color: #378ADD;
+}
+
+/* ---- Section Title ---- */
+.section-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #888;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ---- Symptom Grid ---- */
+.symptom-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.symptom-btn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #333;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.symptom-btn:hover {
+  border-color: #378ADD;
+  color: #378ADD;
+}
+
+.symptom-btn.selected {
+  background: #E6F1FB;
+  border-color: #378ADD;
+  color: #0C447C;
+  font-weight: 500;
+}
+
+/* ---- Selected Tags ---- */
+.selected-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  background: #E6F1FB;
+  color: #0C447C;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tag .remove {
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* ---- Input Row ---- */
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  color: #1a1a1a;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.input-row input:focus {
+  border-color: #378ADD;
+}
+
+/* ---- Buttons ---- */
+.analyze-btn {
+  padding: 10px 22px;
+  background: #378ADD;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+
+.analyze-btn:hover {
+  background: #185FA5;
+}
+
+.analyze-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ---- Result Card ---- */
+.result-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.result-card.loading {
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+  padding: 2rem;
+}
+
+.ai-response {
+  font-size: 14px;
+  color: #1a1a1a;
+  line-height: 1.8;
+}
+
+/* ---- Spinner ---- */
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ccc;
+  border-top-color: #378ADD;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ---- Disclaimer ---- */
+.disclaimer {
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+  margin-top: 1.5rem;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+  line-height: 1.6;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 500px) {
+  .input-row {
+    flex-direction: column;
+  }
+  .analyze-btn {
+    width: 100%;
+  }
+  .header h1 {
+    font-size: 20px;
+  }
+}
