@@ -42,3 +42,6 @@ medical_ai_node/
    ```
 4. **Test it!** Open `http://localhost:3000` in your web browser.
 
+## Live Url -
+
+**https://med-ai-18.vercel.app/**
